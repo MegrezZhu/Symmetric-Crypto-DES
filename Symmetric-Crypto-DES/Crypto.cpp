@@ -126,7 +126,7 @@ Crypto::Data Crypto::permute(const Data &block, const vector<int> &table) {
 	int size = table.size();
 	Data result;
 	result.resize(size);
-	for (int i = 0; i < size * 8; i++) {
+	for (int i = 0; i < size; i++) {
 		result[i] = block[table[i]];
 	}
 	return result;
